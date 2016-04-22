@@ -1,0 +1,17 @@
+{% extends "blogbase.html" %}
+{% block content %}
+	<h2>Login</h2>
+	<br>
+	<form method='post' action='/blog/login'>
+		<label>
+			Username:<input type='text' name='username' value='{{username}}'><div class="error">{{usernameError}}</div>
+		</label>	
+		<label>
+			Password:<input type='password' name='password'><div class="error">{{pwError}}</div>
+		</label>		
+		<br>
+		<input type='submit'>
+	</form>
+	<br>
+	<i><b>New User?</b><a href="/blog/signup">Register Here</a></i>	
+{% endblock %}

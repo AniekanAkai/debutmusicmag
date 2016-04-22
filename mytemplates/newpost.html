@@ -1,0 +1,23 @@
+{% extends "blogbase.html" %}
+{% block content %}
+	<form method='POST' action='/blog/newpost'>
+		<label>
+			<div>Title*</div>
+			<input type='text' name='subject' value={{titletext}}>
+		</label>
+		<br>
+		<label>
+			<div>Body*:</div>
+			<textarea name='content' rows='30' cols='50'>{{article}}</textarea>
+		</label>
+		<label>
+			<div>Artist(s):<input type="text" name="artists" value={{artists}}></div>
+		</label>
+		<label>
+			<div>Genre(s):<input type="text" name="genres" value={{genres}}></div>
+		</label>
+		<br>
+		<input type="submit" value="POST">
+		<div class='error'>{{error}}</div>
+	</form>
+{% endblock %}

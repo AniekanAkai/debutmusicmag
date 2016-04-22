@@ -1,0 +1,8 @@
+<ul class="style1">
+	<li class="first">
+		<p class="date"><a href="#">{{a.created.strftime("%b %d")}}<b>{{a.created.strftime("%Y")}}</b></a></p>
+		<h3>{{a.title}}</h3>
+		<p><a href="/blog/{{a.key().id()}}">{{a.article}}</a></p>
+		<p>{{a.tags}}</p>
+	</li>
+</ul>

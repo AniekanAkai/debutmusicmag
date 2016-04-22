@@ -1,0 +1,35 @@
+	body{
+		font-family: sans-serif;
+		width: 800px;
+		margin: 0 auto;
+		padding: 10px;
+	}
+	
+	label{
+		display:block;
+		font-size: 20px;
+	}
+	
+	input[type=text]{
+		width: 400px;
+		font-size: 20px;
+		padding: 2px
+	}
+	
+	input[type=submit]{
+		font-size: 10px;
+	}
+	
+	hr{
+		margin: 20px auto;
+	}
+	
+	.article-title{
+		font-weight: bold;
+		font-size: 20px;
+	}
+	
+	.article-body{
+		margin:0;
+		font-size: 17px;
+	}

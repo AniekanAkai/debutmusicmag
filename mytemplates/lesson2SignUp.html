@@ -1,0 +1,22 @@
+{% extends "blogbase.html" %}
+{% block content %}
+
+	<h2>Account sign up</h2>
+	<br>
+	<form method='post' action='/blog/signup'>
+		<label>
+			Username:<input type='text' name='username' value='{{username}}'><div class="error">{{usernameError}}</div>
+		</label>	
+		<label>
+			Password:<input type='password' name='password'><div class="error">{{pwError}}</div>
+		</label>	
+		<label>
+			Confirm Password:<input type='password' name='verify'><div class="error">{{verifyError}}</div>
+		</label>	
+		<label>
+			Email(Optional):<input type='text' name='email' value='{{email}}'><div class="error">{{emailError}}</div>
+		</label>	
+		<br>
+		<input type='submit'>
+	</form>
+{% endblock %}

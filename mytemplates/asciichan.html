@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>asciichan</title>
+		<h1>WOW Ascii Art is awesome!!!!</h1>
+	</head>
+	
+	<style type="text/css">
+		body{
+			font-family: sans-serif;
+			width: 800px;
+			margin: 0 auto;
+			padding: 10px;
+		}
+		
+		.error{
+			color: red
+		}
+		
+		label{
+			display:block;
+			font-size: 20px;
+		}
+		
+		input[type=text]{
+			width: 400px;
+			font-size: 20px;
+			padding: 2px
+		}
+		
+		textarea{
+			width: 400px;
+			height: 200px;
+			font-size: 17px;
+			font-family: monospace;
+		}
+		
+		input[type=submit]{
+			font-size: 24px;
+		}
+		
+		hr{
+			margin: 20px auto;
+		}
+		
+		.art + .art{
+			margin-top: 20px;
+		}
+		
+		.art-title{
+			font-weight: bold;
+			font-size: 20px;
+		}
+		
+		.art-body{
+			margin:0;
+			font-size: 17px;
+		}
+	</style>
+	
+	<body>
+		<form method='POST'>
+			<label>
+				<div>title*</div>
+				<input type='text' name='title' value={{titletext}}>
+			</label>
+			<br>
+			<label>
+			<div>Draw*:</div>
+			<textarea name='art' rows='30' cols='50'>{{artwork}}</textarea>
+			</label>
+			<br>
+			<input type="submit" value="POST">
+			<div class='error'>{{error}}</div>
+		</form>
+		<hr>		
+		{% for a in arts %} <!--Embedded python code in html-->
+		<div class="art">
+			<div class="art-title">{{a.title}}</div>
+			<pre class="art-body">{{a.artwork}}</pre>
+			<div>{{a.created}}</div>
+		</div>
+		{% endfor %}
+	</body>
+</html>
